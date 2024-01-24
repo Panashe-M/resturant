@@ -32,7 +32,7 @@ public class ManagementController {
         managementService.addProduct(product);
     }
 
-    @DeleteMapping
+    @DeleteMapping(path = "/delete")
     public void deleteProduct(@RequestBody int product_id){
         managementService.deleteProduct(product_id);
     }

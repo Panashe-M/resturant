@@ -9,10 +9,11 @@ import java.util.ListIterator;
 @Service
 public class Cart {
     ArrayList<Item> item= new ArrayList<Item>();
-    double totalAmount;
+    double totalAmount=0;
 
     public void addToCart(Item item){
         this.item.add(item);
+        this.totalAmount+= item.getPrice()* item.getQuantity();
     }
 
 //    i could just use product id but do i need to do that idk

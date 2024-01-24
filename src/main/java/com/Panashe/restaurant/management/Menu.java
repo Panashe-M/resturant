@@ -8,6 +8,15 @@ import jakarta.persistence.*;
 public class Menu {
 
     @Id
+    @SequenceGenerator(
+            name = "bank_id_sequence",
+            sequenceName = "bank_id_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "bank_id_sequence"
+    )
     private int productId;
     private String name;
     private  int price;
